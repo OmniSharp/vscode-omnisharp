@@ -40,6 +40,3 @@ steps:
     npm ci
     npm i -g gulp
   displayName: 'Install dependencies'
-
-- script: npm run compile
-  displayName: 'Compile'

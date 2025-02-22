@@ -16,10 +16,14 @@ jobs:
 - job:
   strategy:
     matrix:
-      CSharpTests:
-        npmCommand: test:withoutDevKit
+      UnitTests:
+        npmCommand: test:unit
+      CSharpIntegrationTests:
+        npmCommand: test:integration:csharp
       DevKitTests:
         npmCommand: test:integration:devkit
+      RazorTests:
+        npmCommand: test:integration:razor
   pool: ${{ parameters.pool }}
   ${{ if parameters.containerName }}:
     container: ${{ parameters.containerName }}

@@ -28,10 +28,20 @@
             }
         },
         {
-            "label": "buildTest",
+            "label": "package",
             "command": "npm",
             "type": "shell",
-            "args": ["run", "compileTest"],
+            "args": ["run", "package"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "packageDev",
+            "command": "npm",
+            "type": "shell",
+            "args": ["run", "packageDev"],
             "group": {
                 "kind": "build",
                 "isDefault": true

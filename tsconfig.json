@@ -9,6 +9,17 @@
         ],
         "paths": {
           "vscode-languageclient": ["./node_modules/vscode-languageclient/lib/common/api"],
+          "vscode-languageclient/callHierarchy": ["./node_modules/vscode-languageclient/lib/common/callHierarchy"],
+          "vscode-languageclient/typeHierarchy": ["./node_modules/vscode-languageclient/lib/common/typeHierarchy"],
+          "vscode-languageclient/notebook": ["./node_modules/vscode-languageclient/lib/common/notebook"],
+          "vscode-languageclient/diagnostic": ["./node_modules/vscode-languageclient/lib/common/diagnostic"],
+          "vscode-languageclient/inlineValue": ["./node_modules/vscode-languageclient/lib/common/inlineValue"],
+          "vscode-languageclient/documentLink": ["./node_modules/vscode-languageclient/lib/common/documentLink"],
+          "vscode-languageclient/declaration": ["./node_modules/vscode-languageclient/lib/common/declaration"],
+          "vscode-languageclient/workspaceFolder": ["./node_modules/vscode-languageclient/lib/common/workspaceFolder"],
+          "vscode-languageclient/colorProvider": ["./node_modules/vscode-languageclient/lib/common/colorProvider"],
+          "vscode-languageclient/selectionRange": ["./node_modules/vscode-languageclient/lib/common/selectionRange"],
+          "vscode-languageclient/protocolConverter": ["./node_modules/vscode-languageclient/lib/common/protocolConverter"],
           "vscode-languageclient/node": ["./node_modules/vscode-languageclient/lib/node/main"],
           "vscode-languageserver-protocol": ["./node_modules/vscode-languageserver-protocol/lib/common/api"],
           "vscode-languageserver-protocol/node": ["./node_modules/vscode-languageserver-protocol/lib/node/main"],
@@ -33,5 +44,5 @@
         "__mocks__",
         "jest.config.ts",
         "baseJestConfig.ts",
-    ]
+    ],
 }

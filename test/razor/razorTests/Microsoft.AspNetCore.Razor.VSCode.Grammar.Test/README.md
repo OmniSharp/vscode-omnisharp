@@ -13,7 +13,7 @@
 Run the following from the root of the repo:
 
 ```bash
-npm run test:razor
+npm run test:unit:razor
 ```
 
 ### Directory Structure
@@ -29,7 +29,7 @@ npm run test:razor
 
 1. Add new test suite file in `./tests` (you can copy an existing test suite as a template).
 2. Update `./tests/grammarTests.test.ts` with the new test suite.
-3. In `testTasks.ts`, modify `runJestTest`'s call to `jest.runCLI` function to include `updateSnapshot: true`. Afterwards, run `npm run test:razor`.
+3. In `testTasks.ts`, modify `runJestTest`'s call to `jest.runCLI` function to include `updateSnapshot: true`. Afterwards, run `npm run test:unit:razor`.
 
 ### Adding / Updating a Test in an Existing Test Suite
 

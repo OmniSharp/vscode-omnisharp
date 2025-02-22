@@ -6,7 +6,7 @@
 import * as vscode from 'vscode';
 import { CodeAction, CodeActionResolveRequest, LSPAny } from 'vscode-languageserver-protocol';
 import { RoslynLanguageServer } from '../server/roslynLanguageServer';
-import { URIConverter, createConverter } from 'vscode-languageclient/lib/common/protocolConverter';
+import { URIConverter, createConverter } from 'vscode-languageclient/protocolConverter';
 import { UriConverter } from '../utils/uriConverter';
 import { getFixAllResponse } from './fixAllCodeAction';
 

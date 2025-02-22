@@ -9,7 +9,7 @@
             "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js"],
-            "preLaunchTask": "buildDev"
+            "preLaunchTask": "packageDev"
         },
         {
             "name": "[Roslyn] Run Current File Integration Tests",
@@ -35,7 +35,7 @@
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js", "${workspaceRoot}/out/test/**/*.js"],
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-            "preLaunchTask": "buildDev",
+            "preLaunchTask": "packageDev",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
@@ -62,7 +62,7 @@
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js", "${workspaceRoot}/out/test/**/*.js"],
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-            "preLaunchTask": "buildDev",
+            "preLaunchTask": "packageDev",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
@@ -89,7 +89,7 @@
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js", "${workspaceRoot}/out/test/**/*.js"],
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-            "preLaunchTask": "buildTest",
+            "preLaunchTask": "packageDev",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
@@ -115,7 +115,7 @@
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js", "${workspaceRoot}/out/test/**/*.js"],
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-            "preLaunchTask": "buildTest"
+            "preLaunchTask": "packageDev"
         },
         {
             "name": "[O# LSP] Run Current File Integration Tests",
@@ -140,7 +140,7 @@
             "sourceMaps": true,
             "outFiles": ["${workspaceRoot}/dist/*.js", "${workspaceRoot}/out/test/**/*.js"],
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-            "preLaunchTask": "buildTest"
+            "preLaunchTask": "packageDev"
         },
         {
             "type": "node",
@@ -195,7 +195,7 @@
             "name": "Razor integration tests",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
-            "args": ["test:razorintegration"],
+            "args": ["test:integration:razor"],
             "cwd": "${workspaceFolder}"
         }
     ],

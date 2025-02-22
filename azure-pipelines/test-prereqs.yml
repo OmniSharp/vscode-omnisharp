@@ -1,8 +1,5 @@
 steps:
 
-- script: npm run vscode:prepublish
-  displayName: 'Prepublish VSIXs'
-
 # We need to download the roslyn language server for the current platform to run integration tests against it.
 - script: gulp installDependencies
   displayName: 'Install Roslyn Language Server'

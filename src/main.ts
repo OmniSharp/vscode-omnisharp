@@ -47,7 +47,11 @@ import { getComponentFolder } from './lsptoolshost/extensions/builtInComponents'
 export async function activate(
     context: vscode.ExtensionContext
 ): Promise<CSharpExtensionExports | OmnisharpExtensionExports | null> {
+    // Start measuring the activation time
+    const startActivation = process.hrtime();
+
     const csharpChannel = vscode.window.createOutputChannel('C#', { log: true });
+    csharpChannel.trace('Activating C# Extension');
 
     await MigrateOptions(vscode);
     const optionStream = createOptionStream(vscode);
@@ -120,6 +124,7 @@ export async function activate(
     const useFramework = useOmnisharpServer && omnisharpOptions.useModernNet !== true;
     const installDependencies: IInstallDependencies = async (dependencies: AbsolutePathPackage[]) =>
         downloadAndInstallPackages(dependencies, networkSettingsProvider, eventStream, isValidDownload);
+
     const runtimeDependenciesExist = await ensureRuntimeDependencies(
         context.extension,
         eventStream,
@@ -247,10 +252,7 @@ export async function activate(
         );
     }
 
-    const activationProperties: { [key: string]: string } = {
-        serverKind: useOmnisharpServer ? 'OmniSharp' : 'Roslyn',
-    };
-    reporter.sendTelemetryEvent(TelemetryEventNames.CSharpActivated, activationProperties);
+    let exports: CSharpExtensionExports | OmnisharpExtensionExports;
 
     if (!useOmnisharpServer) {
         debugSessionTracker.initializeDebugSessionHandlers(context);
@@ -262,7 +264,7 @@ export async function activate(
         util.isNotNull(projectInitializationCompletePromise);
 
         const languageServerExport = new RoslynLanguageServerExport(roslynLanguageServerStartedPromise);
-        return {
+        exports = {
             initializationFinished: async () => {
                 await coreClrDebugPromise;
                 await razorLanguageServerStartedPromise;
@@ -282,7 +284,7 @@ export async function activate(
             },
         };
     } else {
-        return {
+        exports = {
             initializationFinished: async () => {
                 const langService = await omnisharpLangServicePromise;
                 await langService!.server.waitForInitialize();
@@ -304,6 +306,17 @@ export async function activate(
             logDirectory: context.logUri.fsPath,
         };
     }
+
+    const timeTaken = process.hrtime(startActivation);
+    const timeTakenStr = (timeTaken[0] * 1000 + timeTaken[1] / 1000000).toFixed(3);
+    csharpChannel.trace('C# Extension activated in ' + timeTakenStr + 'ms.');
+    const activationProperties: { [key: string]: string } = {
+        serverKind: useOmnisharpServer ? 'OmniSharp' : 'Roslyn',
+        timeTaken: timeTakenStr,
+    };
+    reporter.sendTelemetryEvent(TelemetryEventNames.CSharpActivated, activationProperties);
+
+    return exports;
 }
 
 /**
