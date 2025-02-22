@@ -33,6 +33,13 @@ steps:
     DISPLAY: :99.0
     CODE_VERSION: ${{ parameters.testVSCodeVersion }}
 
+- powershell: |
+    $tempPath = [System.IO.Path]::GetTempPath()
+    echo "Temp Path: $tempPath"
+    Get-ChildItem -Path $tempPath -Filter *.cpuprofile | Copy-Item -Destination "$(Build.SourcesDirectory)/out/logs"
+  displayName: 'Copy .cpuprofile files to out/logs'
+  condition: succeededOrFailed()
+
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   displayName: 'Publish Test Results'
@@ -46,14 +53,14 @@ steps:
 
 - ${{ if eq(variables['System.TeamProject'], 'internal') }}:
   - task: 1ES.PublishPipelineArtifact@1
-    condition: failed()
+    condition: succeededOrFailed()
     displayName: 'Upload integration test logs'
     inputs:
       path: '$(Build.SourcesDirectory)/out/logs'
       artifact: 'Test Logs ($(System.StageDisplayName)-$(Agent.JobName)-$(System.JobAttempt))'
 - ${{ else }}: 
   - task: PublishPipelineArtifact@1
-    condition: failed()
+    condition: succeededOrFailed()
     displayName: 'Upload integration test logs'
     inputs:
       targetPath: '$(Build.SourcesDirectory)/out/logs'
