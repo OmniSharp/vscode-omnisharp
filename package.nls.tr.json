@@ -44,7 +44,7 @@
   "configuration.dotnet.completion.showNameCompletionSuggestions": "Yakın zamanda seçtiğiniz üyeler için otomatik nesne adı tamamlama gerçekleştirin.",
   "configuration.dotnet.completion.triggerCompletionInArgumentLists": "Bağımsız değişken listelerinde tamamlama listesini otomatik olarak göster",
   "configuration.dotnet.defaultSolution.description": "Varsayılan çözümün yolu, çalışma alanında açılacak veya atlamak için 'devre dışı' olarak ayarlanacak. (Daha önce 'omnisharp.defaultLaunchSolution')",
-  "configuration.dotnet.diagnostics.reportInformationAsHint": "Enable this setting to reduce visual distractions in your editor. Information problems will be reported as hints and only be visible when the code actions popup is open.",
+  "configuration.dotnet.diagnostics.reportInformationAsHint": "Düzenleyicinizdeki görsel dikkat dağıtıcı öğeleri azaltmak için bu ayarı etkinleştirin. Bilgi sorunları ipucu olarak bildirilecek ve yalnızca kod eylemleri açılır penceresi açıkken görülebilecektir.",
   "configuration.dotnet.enableXamlTools": "C# Geliştirme Setini kullanırken XAML araçlarını etkinleştirir",
   "configuration.dotnet.formatting.organizeImportsOnFormat": "'using' yönergelerinin belge biçimlendirmesi sırasında gruplandırılarak sıralanıp sıralanmayacağını belirtir. (Önceki adıyla `omnisharp.organizeImportsOnFormat`)",
   "configuration.dotnet.highlighting.highlightRelatedJsonComponents": "İmlecin altındaki ilgili JSON bileşenlerini vurgula.",

@@ -44,7 +44,7 @@
   "configuration.dotnet.completion.showNameCompletionSuggestions": "最近選択したメンバーの自動オブジェクト名の完了を実行します。",
   "configuration.dotnet.completion.triggerCompletionInArgumentLists": "引数リストに入力候補一覧を自動的に表示する",
   "configuration.dotnet.defaultSolution.description": "ワークスペースで開く既定のソリューションのパス。スキップするには 'disable' に設定します。(以前の `omnisharp.defaultLaunchSolution`)",
-  "configuration.dotnet.diagnostics.reportInformationAsHint": "Enable this setting to reduce visual distractions in your editor. Information problems will be reported as hints and only be visible when the code actions popup is open.",
+  "configuration.dotnet.diagnostics.reportInformationAsHint": "この設定を有効にすると、エディター内の視覚的な注意がそがれるものを減らすことができます。情報の問題はヒントとして報告され、コード アクション ポップアップが開いているときにのみ表示されます。",
   "configuration.dotnet.enableXamlTools": "C# 開発キットを使用するときに XAML ツールを有効にします",
   "configuration.dotnet.formatting.organizeImportsOnFormat": "ドキュメントの書式設定中に 'using' ディレクティブをグループ化して並べ替える必要があるかどうかを指定します。(以前の 'omnisharp.organizeImportsOnFormat')",
   "configuration.dotnet.highlighting.highlightRelatedJsonComponents": "カーソルの下にある関連する JSON コンポーネントをハイライトします。",

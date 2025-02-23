@@ -44,7 +44,7 @@
   "configuration.dotnet.completion.showNameCompletionSuggestions": "Execute a conclusão automática do nome do objeto para os membros que você selecionou recentemente.",
   "configuration.dotnet.completion.triggerCompletionInArgumentLists": "Mostrar automaticamente a lista de conclusão nas listas de argumentos",
   "configuration.dotnet.defaultSolution.description": "O caminho da solução padrão a ser aberta no workspace ou definido como 'desabilitado' para ignorá-la. (Anteriormente `omnisharp.defaultLaunchSolution`)",
-  "configuration.dotnet.diagnostics.reportInformationAsHint": "Enable this setting to reduce visual distractions in your editor. Information problems will be reported as hints and only be visible when the code actions popup is open.",
+  "configuration.dotnet.diagnostics.reportInformationAsHint": "Habilite essa configuração para reduzir as distrações visuais no seu editor. Problemas de informações serão relatados como dicas e só ficarão visíveis quando o pop-up de ações de código estiver aberto.",
   "configuration.dotnet.enableXamlTools": "Habilita ferramentas XAML ao usar o Kit de Desenvolvimento em C#",
   "configuration.dotnet.formatting.organizeImportsOnFormat": "Especifica se as diretivas 'usando' devem ser agrupadas e classificadas durante a formatação do documento. (Anteriormente `omnisharp.organizeImportsOnFormat`)",
   "configuration.dotnet.highlighting.highlightRelatedJsonComponents": "Destaque os componentes JSON relacionados sob o cursor.",

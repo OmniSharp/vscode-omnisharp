@@ -44,7 +44,7 @@
   "configuration.dotnet.completion.showNameCompletionSuggestions": "최근에 선택한 멤버에 대해 자동 개체 이름 완성을 수행합니다.",
   "configuration.dotnet.completion.triggerCompletionInArgumentLists": "인수 목록에 자동으로 완성 목록 표시",
   "configuration.dotnet.defaultSolution.description": "작업 영역에서 열릴 기본 솔루션의 경로, 건너뛰려면 '비활성화'로 설정하세요(이전 `omnisharp.defaultLaunchSolution`).",
-  "configuration.dotnet.diagnostics.reportInformationAsHint": "Enable this setting to reduce visual distractions in your editor. Information problems will be reported as hints and only be visible when the code actions popup is open.",
+  "configuration.dotnet.diagnostics.reportInformationAsHint": "이 설정을 활성화하면 편집기에서 시각적 방해 요소를 줄일 수 있습니다. 정보 문제는 힌트로 보고되며 코드 작업 팝업이 열려 있을 때만 표시됩니다.",
   "configuration.dotnet.enableXamlTools": "C# 개발자 키트를 사용할 때 XAML 도구 사용",
   "configuration.dotnet.formatting.organizeImportsOnFormat": "문서 서식을 지정하는 동안 'using' 지시문을 그룹화하고 정렬할지 여부를 지정합니다. (Previously `omnisharp.organizeImportsOnFormat`)",
   "configuration.dotnet.highlighting.highlightRelatedJsonComponents": "커서 아래에서 관련 JSON 구성 요소를 강조 표시합니다.",
